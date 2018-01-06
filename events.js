@@ -20,99 +20,40 @@ let titleLeave = document.getElementById('page-header').addEventListener('mousel
 });
 
 //events for when a section element is clicked//
-//NEEDS TO BE REFACTORED!!!!!!!!!!//
-let sectionClick = document.getElementsByClassName('article-section')[0].addEventListener('click', function (event) {
+let sectionClick = document.querySelector('article').addEventListener('click', function (event) {
         outputElement.innerHTML = `You clicked the "${event.target.innerHTML}" section.`;
              console.log('event', event.target.innerHTML);   
 });
-let sectionClick2 = document.getElementsByClassName('article-section')[1].addEventListener('click', function (event) {
-    outputElement.innerHTML = `You clicked the "${event.target.innerHTML}" section.`;
-    console.log('event', event.target.innerHTML);
-});
-let sectionClick3 = document.getElementsByClassName('article-section')[2].addEventListener('click', function (event) {
-    outputElement.innerHTML = `You clicked the "${event.target.innerHTML}" section.`;
-    console.log('event', event.target.innerHTML);
-});
-let sectionClick4 = document.getElementsByClassName('article-section')[3].addEventListener('click', function (event) {
-    outputElement.innerHTML = `You clicked the "${event.target.innerHTML}" section.`;
-    console.log('event', event.target.innerHTML);
-});
-let sectionClick5 = document.getElementsByClassName('article-section')[4].addEventListener('click', function (event) {
-    outputElement.innerHTML = `You clicked the "${event.target.innerHTML}" section.`;
-    console.log('event', event.target.innerHTML);
-});
-let sectionClick6 = document.getElementsByClassName('article-section')[5].addEventListener('click', function (event) {
-    outputElement.innerHTML = `You clicked the "${event.target.innerHTML}" section.`;
-    console.log('event', event.target.innerHTML);
-});
 
 
-/////////////////////
-let typePress = document.getElementById('keypress-input').addEventListener('keypress', function (event) {
-    outputElement.innerHTML = `"${event.target.innerHTML}"`;
+////////////////////////////////////////////////////////////////////
+let typePress = document.getElementById('keypress-input');
+ typePress.addEventListener('input', function (event) {
+    outputElement.innerHTML = typePress.value;
     console.log("event", event.target.innerHTML);
 });
-/////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+//Guinea Pig IDs and EL's//
+let guineaPig = document.getElementById("guinea-pig");
+let addColor = document.getElementById("add-color");
+let hulkify = document.getElementById("make-large");
+let captureIt = document.getElementById("add-border");
+let rounded = document.getElementById("add-rounding");
 
 
-///////////////////////////////////////////
-//Previous attempts at less wet function
-//////////////////////////////////////////
-/////////////
-//Attempt 1//
-/////////////
-// let target = document.getElementsByClassName('article-section');
-// console.log('target',target);
-// let targetArray = [];
-// targetArray.push(target)
-// for (let i = 0; i < targetArray.length; i++) {
-//     targetArray[i].addEventListener('click', function (event) {
-//         OutputHtml();
-//     })
-    
-// }
+addColor.addEventListener("click", function () {
+    guineaPig.style.color = ("blue");
+});
 
-// function OutputHtml() {
+hulkify.addEventListener("click", function () {
+    guineaPig.style.fontSize = "50pt";
+});
 
-//     outputElement = something;
+captureIt.addEventListener("click", function () {
+    guineaPig.style.border = " thick solid #0000FF";
+});
 
-//     outputElement.innerHtml = "something";
-// } 
-
-
-/////////////
-//Attempt 2//
-/////////////
-// function printOnClick() {
-//     let outputElement = document.getElementById("output-target");
-//     let target = document.getElementsByClassName('article-section');
-//     console.log('target',target);
-//     let targetArray = [];
-//     // targetArray.push(target)
-//     for (let i = 0; i < targetArray.length; i++) {
-//         targetArray.push(target[i])
-//         let sectionClick = document.getElementsByClassName('article-section')[i].addEventListener('click', function (event) {
-//         outputElement.innerHTML = `You clicked the "${event.target.innerHTML}" section.`;
-//             console.log('event', event.target.innerHTML);   
-//         });
-        
-//     }
-// }
-// printOnClick()
-
-
-/////////////
-//Attempt 3//
-/////////////
-// function printOnClick() {
-//     let outputElement = document.getElementById("output-target");
-//     let target = document.getElementsByClassName('article-section');
-//     console.log('target',target);
-//     let targetArray = [];
-//     targetArray.push(target)
-//     console.log('targetArray', targetArray);
-// }
-// printOnClick()
-
-
-
+rounded.addEventListener("click", function () {
+    guineaPig.style.borderRadius = "30px";
+});

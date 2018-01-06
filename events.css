@@ -1,0 +1,12 @@
+.article-section:first-child {
+    font-weight: bold;
+}
+
+.article-section:last-of-type {
+    font-weight: bold;
+    font-style: italic;
+}
+
+button {
+    display: block;
+}
